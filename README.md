@@ -8,7 +8,8 @@ Node.js &amp; MongoDB: Oplog tailing
 ```js
   var Oplogger = require('node-mongo-oplogger');
 
-  var Oplog = Oplogger.tail( MONGO_URL, MONGO_OPLOG_URL, { 'db': 'dbName', 'colls': [ 'collName', ... ] } );
+  var Oplog = Oplogger.tail( MONGO_URL, MONGO_OPLOG_URL, 
+                { 'db': 'dbName', 'colls': [ 'collName', ... ] } );
 
   Oplog.onInsert( function ( item ) {
     // item {
